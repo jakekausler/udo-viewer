@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "udo": "tsx scripts/udoCrawler.ts"
+    "udo": "tsx scripts/udoCrawler.ts",
+    "server": "python3 scripts/server.py"
   },
   "dependencies": {
     "@mantine/core": "^7.17.3",
@@ -17,6 +18,7 @@
     "@types/node": "^22.14.0",
     "axios": "^1.8.4",
     "cheerio": "^1.0.0",
+    "framer-motion": "^12.6.3",
     "postcss-preset-mantine": "^1.17.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

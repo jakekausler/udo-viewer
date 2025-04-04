@@ -26,7 +26,8 @@ const FlipBookViewer: React.FC<FlipBookViewerProps> = ({ margin, section }) => {
     const doc = parser.parseFromString(section.content, 'text/html');
 
     doc.querySelectorAll('img').forEach(img => {
-      img.src = img.src.replace('http://192.168.2.148:5176/', 'https://udo.raleighnc.gov/');
+      const url = new URL(img.src);
+      img.src = `https://udo.raleighnc.gov${url.pathname}`;
       img.loading = 'lazy';
     });
 

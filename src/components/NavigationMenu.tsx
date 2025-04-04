@@ -2,26 +2,17 @@ import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { ActionIcon, Anchor, Box, Button, Collapse, Group, Stack } from '@mantine/core';
 import { IconChevronDown, IconChevronRight } from '@tabler/icons-react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { fetchUDOData } from '../services/dataFetcher';
 import { Article, Chapter, Section } from '../types';
 
 interface NavigationMenuProps {
+  udoData: { chapters: Chapter[] } | null;
 }
 
-const NavigationMenu: React.FC<NavigationMenuProps> = () => {
-  const [udoData, setUdoData] = useState<{ chapters: Chapter[] } | null>(null);
+const NavigationMenu: React.FC<NavigationMenuProps> = ({ udoData }) => {
   const [expandedChapters, setExpandedChapters] = useState<Set<number>>(new Set());
   const [expandedArticles, setExpandedArticles] = useState<Set<string>>(new Set());
   const navigate = useNavigate();
   const location = useLocation();
-
-  useEffect(() => {
-    const loadData = async () => {
-      const data = await fetchUDOData();
-      setUdoData(data);
-    };
-    loadData();
-  }, []);
 
   useEffect(() => {
     if (!udoData) return;
