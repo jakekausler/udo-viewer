@@ -2,9 +2,11 @@
   "chapters": [
     {
       "title": "CHAPTER 1. INTRODUCTORY PROVISIONS",
+      "url": "chapter-1-introductory-provisions",
       "articles": [
         {
           "title": "Article 1.1. Legal Provisions",
+          "url": "article-11-legal-provisions",
           "sections": [
             {
               "title": "Sec. 1.1.1. Title",
@@ -75,6 +77,7 @@
         },
         {
           "title": "Article 1.2. Zoning Map",
+          "url": "article-12-zoning-map",
           "sections": [
             {
               "title": "Sec. 1.2.1. Establishment of Official Zoning Map",
@@ -95,6 +98,7 @@
         },
         {
           "title": "Article 1.3. Zoning Districts",
+          "url": "article-13-zoning-districts",
           "sections": [
             {
               "title": "Sec. 1.3.1. General Use Zoning Districts",
@@ -120,6 +124,7 @@
         },
         {
           "title": "Article 1.4. Building Types",
+          "url": "article-14-building-types",
           "sections": [
             {
               "title": "Sec. 1.4.1. Building Type Descriptions",
@@ -135,6 +140,7 @@
         },
         {
           "title": "Article 1.5. Measurement, Exceptions & General Rules of Applicability",
+          "url": "article-15-measurement-exceptions-general-rules-applicability",
           "sections": [
             {
               "title": "Sec. 1.5.1. Site",
@@ -202,9 +208,11 @@
     },
     {
       "title": "CHAPTER 2. RESIDENTIAL DISTRICTS",
+      "url": "chapter-2-residential-districts",
       "articles": [
         {
           "title": "Article 2.1. General Provisions",
+          "url": "article-21-general-provisions",
           "sections": [
             {
               "title": "Sec. 2.1.1. District Intent Statements",
@@ -225,6 +233,7 @@
         },
         {
           "title": "Article 2.2. Conventional Development Option",
+          "url": "article-22-conventional-development-option",
           "sections": [
             {
               "title": "Sec. 2.2.1. Detached House",
@@ -275,6 +284,7 @@
         },
         {
           "title": "Article 2.3. Compact Development",
+          "url": "article-23-compact-development",
           "sections": [
             {
               "title": "Sec. 2.3.1. General Requirements",
@@ -315,6 +325,7 @@
         },
         {
           "title": "Article 2.4. Conservation Development Option",
+          "url": "article-24-conservation-development-option",
           "sections": [
             {
               "title": "Sec. 2.4.1. General Requirements",
@@ -355,6 +366,7 @@
         },
         {
           "title": "Article 2.5. Common Open Space Requirements",
+          "url": "article-25-common-open-space-requirements",
           "sections": [
             {
               "title": "Sec. 2.5.1. Amount of Open Space",
@@ -395,6 +407,7 @@
         },
         {
           "title": "Article 2.6. Additional Housing Patterns",
+          "url": "article-26-additional-housing-patterns",
           "sections": [
             {
               "title": "Sec. 2.6.1. Cottage Court",
@@ -420,6 +433,7 @@
         },
         {
           "title": "Article 2.7. Frequent Transit Development Option",
+          "url": "article-27-frequent-transit-development-option",
           "sections": [
             {
               "title": "Sec. 2.7.1. Frequent Transit Development Option",
@@ -432,9 +446,11 @@
     },
     {
       "title": "CHAPTER 3. MIXED USE DISTRICTS",
+      "url": "chapter-3-mixed-use-districts",
       "articles": [
         {
           "title": "Article 3.1. General Provisions",
+          "url": "article-31-general-provisions",
           "sections": [
             {
               "title": "Sec. 3.1.1. District Intent Statement",
@@ -450,6 +466,7 @@
         },
         {
           "title": "Article 3.2. Base Dimensional Standards",
+          "url": "article-32-base-dimensional-standards",
           "sections": [
             {
               "title": "Sec. 3.2.1. Detached House",
@@ -500,6 +517,7 @@
         },
         {
           "title": "Article 3.3. Height Requirements",
+          "url": "article-33-height-requirements",
           "sections": [
             {
               "title": "Sec. 3.3.1. Applicability",
@@ -520,6 +538,7 @@
         },
         {
           "title": "Article 3.4. Frontage Requirements",
+          "url": "article-34-frontage-requirements",
           "sections": [
             {
               "title": "Sec. 3.4.1. Purpose and Intent",
@@ -575,6 +594,7 @@
         },
         {
           "title": "Article 3.5. Neighborhood Transitions",
+          "url": "article-35-neighborhood-transitions",
           "sections": [
             {
               "title": "Sec. 3.5.1. Applicability",
@@ -610,6 +630,7 @@
         },
         {
           "title": "Article 3.6. Additional Housing Patterns",
+          "url": "article-36-additional-housing-patterns",
           "sections": [
             {
               "title": "Sec. 3.6.1. Cottage Court",
@@ -625,6 +646,7 @@
         },
         {
           "title": "Article 3.7. Frequent Transit Development Option",
+          "url": "article-37-frequent-transit-development-option",
           "sections": [
             {
               "title": "Sec. 3.7.1. Frequent Transit Development Option",
@@ -637,9 +659,11 @@
     },
     {
       "title": "CHAPTER 4. SPECIAL DISTRICTS",
+      "url": "chapter-4-special-districts",
       "articles": [
         {
           "title": "Article 4.1. General Provisions",
+          "url": "article-41-general-provisions",
           "sections": [
             {
               "title": "Sec. 4.1.1. District Intent Statements",
@@ -650,6 +674,7 @@
         },
         {
           "title": "Article 4.2. Conservation Management (CM)",
+          "url": "article-42-conservation-management-cm",
           "sections": [
             {
               "title": "Sec. 4.2.1. General Provisions",
@@ -665,6 +690,7 @@
         },
         {
           "title": "Article 4.3. Agriculture Productive (AP)",
+          "url": "article-43-agriculture-productive-ap",
           "sections": [
             {
               "title": "Sec. 4.3.1. Detached House",
@@ -680,6 +706,7 @@
         },
         {
           "title": "Article 4.4. Heavy Industrial (IH)",
+          "url": "article-44-heavy-industrial-ih",
           "sections": [
             {
               "title": "Sec. 4.4.1. General Building",
@@ -690,6 +717,7 @@
         },
         {
           "title": "Article 4.5. Manufactured Housing (MH)",
+          "url": "article-45-manufactured-housing-mh",
           "sections": [
             {
               "title": "Sec. 4.5.1. Site Size, Residential Density and Land Use",
@@ -710,6 +738,7 @@
         },
         {
           "title": "Article 4.6. Campus (CMP)",
+          "url": "article-46-campus-cmp",
           "sections": [
             {
               "title": "Sec. 4.6.1. Campus Areas",
@@ -735,6 +764,7 @@
         },
         {
           "title": "Article 4.7. Planned Development (PD)",
+          "url": "article-47-planned-development-pd",
           "sections": [
             {
               "title": "Sec. 4.7.1. Establishment of a PD District",
@@ -772,9 +802,11 @@
     },
     {
       "title": "CHAPTER 5. OVERLAY DISTRICTS",
+      "url": "chapter-5-overlay-districts",
       "articles": [
         {
           "title": "Article 5.1. General Provisions",
+          "url": "article-51-general-provisions",
           "sections": [
             {
               "title": "Sec. 5.1.1. District Intent Statements",
@@ -785,6 +817,7 @@
         },
         {
           "title": "Article 5.2. Environmental Overlays",
+          "url": "article-52-environmental-overlays",
           "sections": [
             {
               "title": "Sec. 5.2.1. Airport Overlay District (-AOD)",
@@ -815,6 +848,7 @@
         },
         {
           "title": "Article 5.3. Corridor Overlays",
+          "url": "article-53-corridor-overlays",
           "sections": [
             {
               "title": "Sec. 5.3.1. Special Highway Overlay Districts (-SHOD-)",
@@ -825,6 +859,7 @@
         },
         {
           "title": "Article 5.4. Character Protection Overlays",
+          "url": "article-54-character-protection-overlays",
           "sections": [
             {
               "title": "Sec. 5.4.1. General Historic Overlay District (-HOD-G)",
@@ -845,6 +880,7 @@
         },
         {
           "title": "Article 5.5. Transit Overlays",
+          "url": "article-55-transit-overlays",
           "sections": [
             {
               "title": "Sec. 5.5.1. Transit Overlay District (-TOD)",
@@ -855,6 +891,7 @@
         },
         {
           "title": "Article 5.6. Parking Overlays",
+          "url": "article-56-parking-overlays",
           "sections": [
             {
               "title": "Sec. 5.6.1. Special Residential Parking Overlay District (-SRPOD)",
@@ -867,9 +904,11 @@
     },
     {
       "title": "CHAPTER 6. USE REGULATIONS",
+      "url": "chapter-6-use-regulations",
       "articles": [
         {
           "title": "Article 6.1. Allowed Uses",
+          "url": "article-61-allowed-uses",
           "sections": [
             {
               "title": "Sec. 6.1.1. Classification of Uses",
@@ -900,6 +939,7 @@
         },
         {
           "title": "Article 6.2. Residential Uses",
+          "url": "article-62-residential-uses",
           "sections": [
             {
               "title": "Sec. 6.2.1. Household Living",
@@ -920,6 +960,7 @@
         },
         {
           "title": "Article 6.3. Public & Institutional Uses",
+          "url": "article-63-public-institutional-uses",
           "sections": [
             {
               "title": "Sec. 6.3.1. Civic",
@@ -940,6 +981,7 @@
         },
         {
           "title": "Article 6.4. Commercial Uses",
+          "url": "article-64-commercial-uses",
           "sections": [
             {
               "title": "Sec. 6.4.1. Day Care",
@@ -1010,6 +1052,7 @@
         },
         {
           "title": "Article 6.5. Industrial Uses",
+          "url": "article-65-industrial-uses",
           "sections": [
             {
               "title": "Sec. 6.5.1. Heavy Industrial",
@@ -1060,6 +1103,7 @@
         },
         {
           "title": "Article 6.6. Open Uses",
+          "url": "article-66-open-uses",
           "sections": [
             {
               "title": "Sec. 6.6.1. Agriculture",
@@ -1075,6 +1119,7 @@
         },
         {
           "title": "Article 6.7. Accessory Uses & Structures",
+          "url": "article-67-accessory-uses-structures",
           "sections": [
             {
               "title": "Sec. 6.7.1. In General",
@@ -1095,6 +1140,7 @@
         },
         {
           "title": "Article 6.8. Temporary Uses",
+          "url": "article-68-temporary-uses",
           "sections": [
             {
               "title": "Sec. 6.8.1. Applicability",
@@ -1112,9 +1158,11 @@
     },
     {
       "title": "CHAPTER 7. GENERAL DEVELOPMENT STANDARDS",
+      "url": "chapter-7-general-development-standards",
       "articles": [
         {
           "title": "Article 7.1. Parking",
+          "url": "article-71-parking",
           "sections": [
             {
               "title": "Sec. 7.1.1. Applicability",
@@ -1165,6 +1213,7 @@
         },
         {
           "title": "Article 7.2. Landscaping and Screening",
+          "url": "article-72-landscaping-and-screening",
           "sections": [
             {
               "title": "Sec. 7.2.1. Intent",
@@ -1215,6 +1264,7 @@
         },
         {
           "title": "Article 7.3. Signs",
+          "url": "article-73-signs",
           "sections": [
             {
               "title": "Sec. 7.3.1. Applicability",
@@ -1305,6 +1355,7 @@
         },
         {
           "title": "Article 7.4. Site Lighting",
+          "url": "article-74-site-lighting",
           "sections": [
             {
               "title": "Sec. 7.4.1. Applicability",
@@ -1370,6 +1421,7 @@
         },
         {
           "title": "Article 7.5. Outdoor Display and Storage",
+          "url": "article-75-outdoor-display-and-storage",
           "sections": [
             {
               "title": "Sec. 7.5.1. Applicability",
@@ -1392,9 +1444,11 @@
     },
     {
       "title": "CHAPTER 8. SUBDIVISION & SITE PLAN STANDARDS",
+      "url": "chapter-8-subdivision-site-plan-standards",
       "articles": [
         {
           "title": "Article 8.1. General Provisions",
+          "url": "article-81-general-provisions",
           "sections": [
             {
               "title": "Sec. 8.1.1. Applicability",
@@ -1450,6 +1504,7 @@
         },
         {
           "title": "Article 8.2. Infrastructure Sufficiency",
+          "url": "article-82-infrastructure-sufficiency",
           "sections": [
             {
               "title": "Sec. 8.2.1. In General",
@@ -1490,6 +1545,7 @@
         },
         {
           "title": "Article 8.3. Blocks, Lots, Access",
+          "url": "article-83-blocks-lots-access",
           "sections": [
             {
               "title": "Sec. 8.3.1. Intent",
@@ -1525,6 +1581,7 @@
         },
         {
           "title": "Article 8.4. New and Existing Streets",
+          "url": "article-84-new-and-existing-streets",
           "sections": [
             {
               "title": "Sec. 8.4.1. General Provisions",
@@ -1535,6 +1592,7 @@
         },
         {
           "title": "Article 8.5. Street Cross Sections",
+          "url": "article-85-street-cross-sections",
           "sections": [
             {
               "title": "Sec. 8.5.1. General Provisions",
@@ -1585,6 +1643,7 @@
         },
         {
           "title": "Article 8.6. Reimbursements",
+          "url": "article-86-reimbursements",
           "sections": [
             {
               "title": "Sec. 8.6.1. Greenways",
@@ -1615,6 +1674,7 @@
         },
         {
           "title": "Article 8.7. Utilities",
+          "url": "article-87-utilities",
           "sections": [
             {
               "title": "Sec. 8.7.1. Water Supply",
@@ -1640,6 +1700,7 @@
         },
         {
           "title": "Article 8.8. Surface Water Drainage",
+          "url": "article-88-surface-water-drainage",
           "sections": [
             {
               "title": "Sec. 8.8.1. Connection to Sanitary Sewer Prohibited",
@@ -1660,6 +1721,7 @@
         },
         {
           "title": "Article 8.9. Facility Fees",
+          "url": "article-89-facility-fees",
           "sections": [
             {
               "title": "Sec. 8.9.1. Facility Fees Imposed on New Construction",
@@ -1690,6 +1752,7 @@
         },
         {
           "title": "Article 8.10. Enforcement",
+          "url": "article-810-enforcement",
           "sections": [
             {
               "title": "Sec. 8.10.1. Violations and Violators",
@@ -1705,6 +1768,7 @@
         },
         {
           "title": "Article 8.11. Transit Infrastructure",
+          "url": "article-811-transit-infrastructure",
           "sections": [
             {
               "title": "Sec. 8.11.1. General Provisions",
@@ -1737,9 +1801,11 @@
     },
     {
       "title": "CHAPTER 9. NATURAL RESOURCE PROTECTION",
+      "url": "chapter-9-natural-resource-protection",
       "articles": [
         {
           "title": "Article 9.1. Tree Conservation",
+          "url": "article-91-tree-conservation",
           "sections": [
             {
               "title": "Sec. 9.1.1. Intent",
@@ -1795,6 +1861,7 @@
         },
         {
           "title": "Article 9.2. Stormwater Management",
+          "url": "article-92-stormwater-management",
           "sections": [
             {
               "title": "Sec. 9.2.1. General Provisions",
@@ -1830,6 +1897,7 @@
         },
         {
           "title": "Article 9.3. Special Flood Hazard Area Regulations",
+          "url": "article-93-special-flood-hazard-area-regulations",
           "sections": [
             {
               "title": "Sec. 9.3.1. General Purpose and Intent",
@@ -1905,6 +1973,7 @@
         },
         {
           "title": "Article 9.4. Erosion & Sedimentation Control",
+          "url": "article-94-erosion-sedimentation-control",
           "sections": [
             {
               "title": "Sec. 9.4.1. Applicability",
@@ -1970,6 +2039,7 @@
         },
         {
           "title": "Article 9.5. Watershed Protection Areas",
+          "url": "article-95-watershed-protection-areas",
           "sections": [
             {
               "title": "Sec. 9.5.1. Urban Watershed Protection Overlay District (-UWPOD)",
@@ -2002,9 +2072,11 @@
     },
     {
       "title": "CHAPTER 10. ADMINISTRATION",
+      "url": "chapter-10-administration",
       "articles": [
         {
           "title": "Article 10.1. Review Bodies",
+          "url": "article-101-review-bodies",
           "sections": [
             {
               "title": "Sec. 10.1.1. City Council",
@@ -2055,6 +2127,7 @@
         },
         {
           "title": "Article 10.2. Review Procedures",
+          "url": "article-102-review-procedures",
           "sections": [
             {
               "title": "Sec. 10.2.1. Common Review Procedures",
@@ -2165,6 +2238,7 @@
         },
         {
           "title": "Article 10.3. Nonconformities",
+          "url": "article-103-nonconformities",
           "sections": [
             {
               "title": "Sec. 10.3.1. In General",
@@ -2200,6 +2274,7 @@
         },
         {
           "title": "Article 10.4. Enforcement",
+          "url": "article-104-enforcement",
           "sections": [
             {
               "title": "Sec. 10.4.1. Violations and Violators",
@@ -2222,9 +2297,11 @@
     },
     {
       "title": "CHAPTER 11. BUILDING AND HOUSING CODE",
+      "url": "chapter-11-building-and-housing-code",
       "articles": [
         {
           "title": "Article 11.1. Adoption of Codes by Reference",
+          "url": "article-111-adoption-codes-reference",
           "sections": [
             {
               "title": "Sec. 11.1.1. Scope of Chapter and Codes",
@@ -2255,6 +2332,7 @@
         },
         {
           "title": "Article 11.2. Development Services Department",
+          "url": "article-112-development-services-department",
           "sections": [
             {
               "title": "Sec. 11.2.1. Functions and Duties",
@@ -2285,6 +2363,7 @@
         },
         {
           "title": "Article 11.3. Examining Boards & Licensing",
+          "url": "article-113-examining-boards-licensing",
           "sections": [
             {
               "title": "Sec. 11.3.1. Registration of Contractors",
@@ -2300,6 +2379,7 @@
         },
         {
           "title": "Article 11.4. Enforcement Provisions",
+          "url": "article-114-enforcement-provisions",
           "sections": [
             {
               "title": "Sec. 11.4.1. Permit Requirements",
@@ -2355,6 +2435,7 @@
         },
         {
           "title": "Article 11.5. Unsafe Buildings",
+          "url": "article-115-unsafe-buildings",
           "sections": [
             {
               "title": "Sec. 11.5.1. Short Title",
@@ -2420,6 +2501,7 @@
         },
         {
           "title": "Article 11.6. Housing Code",
+          "url": "article-116-housing-code",
           "sections": [
             {
               "title": "Sec. 11.6.1. Preamble; Definitions",
@@ -2510,6 +2592,7 @@
         },
         {
           "title": "Article 11.7. Manufactured Homes",
+          "url": "article-117-manufactured-homes",
           "sections": [
             {
               "title": "Sec. 11.7.1. Inspection of Manufactured Homes Certificate Required",
@@ -2525,6 +2608,7 @@
         },
         {
           "title": "Article 11.8. Demolition by Neglect of Historic Landmarks and Structures Within Historic Overlay Districts",
+          "url": "article-118-demolition-neglect-historic-landmarks-and-structures-within-historic-overlay-districts",
           "sections": [
             {
               "title": "Sec. 11.8.1. Applicability",
@@ -2555,6 +2639,7 @@
         },
         {
           "title": "Article 11.9. Nonresidential Building or Structure Code",
+          "url": "article-119-nonresidential-building-or-structure-code",
           "sections": [
             {
               "title": "Sec. 11.9.1. Title",
@@ -2667,9 +2752,11 @@
     },
     {
       "title": "CHAPTER 12. DEFINITIONS",
+      "url": "chapter-12-definitions",
       "articles": [
         {
           "title": "Article 12.1. General",
+          "url": "article-121-general",
           "sections": [
             {
               "title": "Sec. 12.1.1. General Meaning of Words and Terms",
@@ -2690,6 +2777,7 @@
         },
         {
           "title": "Article 12.2. Defined Terms",
+          "url": "article-122-defined-terms",
           "sections": [
             {
               "title": "a",
@@ -2812,6 +2900,7 @@
     },
     {
       "title": "HISTORY TABLE",
+      "url": "history-table",
       "articles": []
     }
   ]

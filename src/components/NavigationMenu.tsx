@@ -1,18 +1,17 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { ActionIcon, Anchor, Box, Button, Collapse, Group, Stack } from '@mantine/core';
-import { fetchUDOData } from '../services/dataFetcher';
-import { Article, Chapter, Section } from '../types';
 import { IconChevronDown, IconChevronRight } from '@tabler/icons-react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { fetchUDOData } from '../services/dataFetcher';
+import { Article, Chapter, Section } from '../types';
 
 interface NavigationMenuProps {
-  onSelectSection: (section: { title: string; content: string }) => void;
 }
 
-const NavigationMenu: React.FC<NavigationMenuProps> = ({ onSelectSection }) => {
+const NavigationMenu: React.FC<NavigationMenuProps> = () => {
   const [udoData, setUdoData] = useState<{ chapters: Chapter[] } | null>(null);
-  const [expandedChapters, setExpandedChapters] = useState<Map<number, boolean>>(new Map());
-  const [expandedArticles, setExpandedArticles] = useState<Map<string, boolean>>(new Map());
+  const [expandedChapters, setExpandedChapters] = useState<Set<number>>(new Set());
+  const [expandedArticles, setExpandedArticles] = useState<Set<string>>(new Set());
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -25,115 +24,77 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ onSelectSection }) => {
   }, []);
 
   useEffect(() => {
-    if (udoData) {
-      const path = location.pathname.split('/').filter(Boolean);
-      if (path.length > 0) {
-        const sectionUrl = path[path.length - 1];
-        udoData.chapters.forEach((chapter, chapterIndex) => {
-          chapter.articles.forEach(article => {
-            article.sections.forEach(section => {
-              if (section.url === sectionUrl) {
-                setExpandedChapters(new Map(expandedChapters.set(chapterIndex, true)));
-                setExpandedArticles(new Map(expandedArticles.set(article.title, true)));
-                onSelectSection(section);
-              }
+    if (!udoData) return;
+
+    const path = location.pathname.split('/').filter(Boolean);
+    if (path.length === 0) return;
+
+    const sectionUrl = path[path.length - 1];
+    for (const [chapterIndex, chapter] of udoData.chapters.entries()) {
+      for (const article of chapter.articles) {
+        for (const section of article.sections) {
+          if (section.url === sectionUrl) {
+            setExpandedChapters(prev => {
+              if (prev.has(chapterIndex)) return prev;
+              const newSet = new Set(prev);
+              newSet.add(chapterIndex);
+              return newSet;
             });
-          });
-        });
+            setExpandedArticles(prev => {
+              if (prev.has(article.title)) return prev;
+              const newSet = new Set(prev);
+              newSet.add(article.title);
+              return newSet;
+            });
+          }
+        }
       }
     }
-  }, [location, udoData, onSelectSection]);
+  }, [location, udoData]);
 
   const toggleChapter = useCallback((index: number) => {
-    setExpandedChapters(prev => new Map(prev).set(index, !prev.get(index)));
+    setExpandedChapters(prev => {
+      const newSet = new Set(prev);
+      newSet.has(index) ? newSet.delete(index) : newSet.add(index);
+      return newSet;
+    });
   }, []);
 
-  const toggleArticle = useCallback((key: string) => {
-    setExpandedArticles(prev => new Map(prev).set(key, !prev.get(key)));
+  const toggleArticle = useCallback((title: string) => {
+    setExpandedArticles(prev => {
+      const newSet = new Set(prev);
+      newSet.has(title) ? newSet.delete(title) : newSet.add(title);
+      return newSet;
+    });
   }, []);
 
   const expandAll = () => {
-    if (udoData) {
-      const allChapters = new Map(udoData.chapters.map((_, index) => [index, true]));
-      const allArticles = new Map(udoData.chapters.flatMap(chapter => chapter.articles.map(article => [article.title, true])));
-      setExpandedChapters(allChapters);
-      setExpandedArticles(allArticles);
-    }
+    if (!udoData) return;
+    setExpandedChapters(new Set(udoData.chapters.map((_, idx) => idx)));
+    setExpandedArticles(
+      new Set(udoData.chapters.flatMap(ch => ch.articles.map(a => a.title)))
+    );
   };
 
   const collapseAll = () => {
-    setExpandedChapters(new Map());
-    setExpandedArticles(new Map());
+    setExpandedChapters(new Set());
+    setExpandedArticles(new Set());
   };
 
-  const ChapterItem = React.memo(({ chapter, chapterIndex }: { chapter: Chapter, chapterIndex: number }) => (
-    <Stack key={chapterIndex}>
-      <Group key={chapterIndex} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} gap="xs">
-        <ActionIcon variant="subtle" size="xs" onClick={() => toggleChapter(chapterIndex)}>
-          {expandedChapters.get(chapterIndex) ? <IconChevronRight /> : <IconChevronDown />}
-        </ActionIcon>
-        <Box style={{ flex: 1, cursor: 'pointer' }}>
-          <strong onClick={() => toggleChapter(chapterIndex)}>{chapter.title}</strong>
-        </Box>
-      </Group>
-      <Collapse in={expandedChapters.get(chapterIndex)}>
-        <Stack>
-          {chapter.articles.map((article, articleIndex) => (
-            <ArticleItem key={articleIndex} article={article} />
-          ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  ));
-
-  const ArticleItem = React.memo(({ article }: { article: Article }) => (
-    <Stack>
-      <Group style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} gap="xs">
-        <ActionIcon variant="subtle" size="xs" onClick={() => toggleArticle(article.title)}>
-          {expandedArticles.get(article.title) ? <IconChevronRight /> : <IconChevronDown />}
-        </ActionIcon>
-        <Box style={{ flex: 1, cursor: 'pointer' }}>
-          <span onClick={() => toggleArticle(article.title)}>{article.title}</span>
-        </Box>
-      </Group>
-      <Collapse in={expandedArticles.get(article.title)}>
-        <Stack>
-          {article.sections.map((section, sectionIndex) => (
-            <SectionItem key={sectionIndex} section={section} />
-          ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  ));
-
-  const SectionItem = React.memo(({ section }: { section: Section }) => (
-    <Stack>
-      <Group style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} gap="xs">
-        <Box style={{ flex: 1, cursor: 'pointer' }} pl="xl">
-          <Anchor
-            size="sm"
-            href={`/${section.url}`}
-            onClick={(e) => {
-              if (e.type === 'click' && e.button === 0 && !e.ctrlKey && !e.metaKey) {
-                e.preventDefault();
-                navigate(`/${section.url}`);
-                onSelectSection(section);
-              }
-            }}
-            style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'normal' }}
-          >
-            {section.title}
-          </Anchor>
-        </Box>
-      </Group>
-    </Stack>
-  ));
-
   const chapters = useMemo(() => {
-    return udoData ? udoData.chapters.map((chapter, chapterIndex) => (
-      <ChapterItem key={chapterIndex} chapter={chapter} chapterIndex={chapterIndex} />
-    )) : null;
-  }, [udoData, expandedChapters, expandedArticles]);
+    return udoData?.chapters.map((chapter, chapterIndex) => (
+      <ChapterItem
+        key={chapterIndex}
+        chapter={chapter}
+        chapterIndex={chapterIndex}
+        isExpanded={expandedChapters.has(chapterIndex)}
+        toggleChapter={toggleChapter}
+        expandedArticles={expandedArticles}
+        toggleArticle={toggleArticle}
+        navigate={navigate}
+      />
+    ));
+  }, [udoData, expandedChapters, expandedArticles, toggleChapter, toggleArticle, navigate]);
 
   return (
     <Stack align="center" style={{ overflowY: 'auto' }}>
@@ -153,3 +114,113 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ onSelectSection }) => {
 };
 
 export default NavigationMenu;
+
+// -------------------------
+// Memoized Child Components
+// -------------------------
+
+interface ChapterItemProps {
+  chapter: Chapter;
+  chapterIndex: number;
+  isExpanded: boolean;
+  toggleChapter: (index: number) => void;
+  expandedArticles: Set<string>;
+  toggleArticle: (title: string) => void;
+  navigate: ReturnType<typeof useNavigate>;
+}
+
+const ChapterItem: React.FC<ChapterItemProps> = React.memo(({
+  chapter,
+  chapterIndex,
+  isExpanded,
+  toggleChapter,
+  expandedArticles,
+  toggleArticle,
+  navigate
+}) => (
+  <Stack>
+    <Group gap="xs" style={{ display: 'flex', alignItems: 'center' }}>
+      <ActionIcon variant="subtle" size="xs" onClick={() => toggleChapter(chapterIndex)}>
+        {isExpanded ? <IconChevronDown /> : <IconChevronRight />}
+      </ActionIcon>
+      <Box style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleChapter(chapterIndex)}>
+        <strong>{chapter.title}</strong>
+      </Box>
+    </Group>
+    <Collapse in={isExpanded}>
+      <Stack>
+        {chapter.articles.map((article, index) => (
+          <ArticleItem
+            key={index}
+            article={article}
+            isExpanded={expandedArticles.has(article.title)}
+            toggleArticle={toggleArticle}
+            navigate={navigate}
+          />
+        ))}
+      </Stack>
+    </Collapse>
+  </Stack>
+));
+
+interface ArticleItemProps {
+  article: Article;
+  isExpanded: boolean;
+  toggleArticle: (title: string) => void;
+  navigate: ReturnType<typeof useNavigate>;
+}
+
+const ArticleItem: React.FC<ArticleItemProps> = React.memo(({
+  article,
+  isExpanded,
+  toggleArticle,
+  navigate
+}) => (
+  <Stack>
+    <Group gap="xs" style={{ display: 'flex', alignItems: 'center' }}>
+      <ActionIcon variant="subtle" size="xs" onClick={() => toggleArticle(article.title)}>
+        {isExpanded ? <IconChevronDown /> : <IconChevronRight />}
+      </ActionIcon>
+      <Box style={{ flex: 1, cursor: 'pointer' }} onClick={() => toggleArticle(article.title)}>
+        <span>{article.title}</span>
+      </Box>
+    </Group>
+    <Collapse in={isExpanded}>
+      <Stack>
+        {article.sections.map((section, idx) => (
+          <SectionItem
+            key={idx}
+            section={section}
+            navigate={navigate}
+          />
+        ))}
+      </Stack>
+    </Collapse>
+  </Stack>
+));
+
+interface SectionItemProps {
+  section: Section;
+  navigate: ReturnType<typeof useNavigate>;
+}
+
+const SectionItem: React.FC<SectionItemProps> = React.memo(({
+  section,
+  navigate
+}) => (
+  <Box pl="xl">
+    <Anchor
+      size="sm"
+      href={`/${section.url}`}
+      onClick={(e) => {
+        if (e.type === 'click' && e.button === 0 && !e.ctrlKey && !e.metaKey) {
+          e.preventDefault();
+          navigate(`/${section.url}`);
+        }
+      }}
+      style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'normal' }}
+    >
+      {section.title}
+    </Anchor>
+  </Box>
+));
