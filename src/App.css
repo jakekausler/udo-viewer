@@ -1,0 +1,23 @@
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  box-sizing: border-box;
+}
+
+tr {
+  border-bottom-color: rgb(43, 53, 59);
+  border-left-color: rgb(43, 53, 59);
+  border-right-color: rgb(43, 53, 59);
+  border-top-color: rgb(43, 53, 59);
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
