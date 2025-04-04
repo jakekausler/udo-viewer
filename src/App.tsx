@@ -61,7 +61,7 @@ function App() {
         />
       </AppShell.Header>
       <AppShell.Navbar>
-        <NavigationMenu />
+        <NavigationMenu udoData={udoData} />
       </AppShell.Navbar>
       <AppShell.Main style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
         {selectedSection ? <FlipBookViewer section={selectedSection} margin={margin} /> : <div>Select a section to view its content</div>}
