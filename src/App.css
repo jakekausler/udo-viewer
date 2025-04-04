@@ -21,3 +21,46 @@ table th, table td {
   border: 1px solid #ddd;
   padding: 10px;
 }
+
+.flipbook-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flipbook-content table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+.flipbook-content pre,
+.flipbook-content code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.flipbook-content ol {
+  list-style-type: upper-alpha; /* Level 1: A, B, C... */
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.flipbook-content ol ol {
+  list-style-type: decimal; /* Level 2: 1, 2, 3... */
+}
+
+.flipbook-content ol ol ol {
+  list-style-type: lower-alpha; /* Level 3: a, b, c... */
+}
+
+.flipbook-content ol ol ol ol {
+  list-style-type: lower-roman; /* Level 4: i, ii, iii... */
+}
+
+.flipbook-content ol ol ol ol ol {
+  list-style-type: upper-alpha; /* Level 5: A, B, C... */
+}
+
+.flipbook-content ol ol ol ol ol ol {
+  list-style-type: decimal; /* Level 6: 1, 2, 3... */
+}

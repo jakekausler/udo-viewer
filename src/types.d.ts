@@ -1,10 +1,12 @@
 export type Chapter = {
   title: string;
+  url: string;
   articles: Article[];
 }
 
 export type Article = {
   title: string;
+  url: string;
   sections: Section[];
 }
 

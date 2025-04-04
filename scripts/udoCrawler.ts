@@ -7,11 +7,13 @@ const BASE_URL = 'https://udo.raleighnc.gov';
 
 type Chapter = {
     title: string;
+    url: string;
     articles: Article[];
 }
 
 type Article = {
     title: string;
+    url: string;
     sections: Section[];
 }
 
@@ -41,29 +43,30 @@ const crawlUDO = async () => {
         // Select chapters using the class 'item-list'
         const chapterElements = $('.item-list li a');
         for (const chapterElem of chapterElements) {
+            const chapterUrl = $(chapterElem).attr('href')?.replace('/', '');
             const chapter = {
                 title: $(chapterElem).text(),
+                url: chapterUrl || '',
                 articles: [] as Article[]
             };
 
-            const chapterUrl = $(chapterElem).attr('href');
             // Fetch the chapter page
-            const chapterResponse = await axiosInstance.get(BASE_URL + chapterUrl);
+            const chapterResponse = await axiosInstance.get(join(BASE_URL, chapterUrl || ''));
             await delay(); // Delay of 1 second
             const chapterPage = load(chapterResponse.data);
 
             // Select articles using the class 'book-navigation__menu'
             const articleElements = chapterPage('.book-navigation .book-navigation__menu li a');
             for (const articleElem of articleElements) {
+                const articleUrl = $(articleElem).attr('href')?.replace('/', '');
                 const article = {
                     title: $(articleElem).text(),
+                    url: articleUrl || '',
                     sections: [] as Section[]
                 };
 
-                const articleUrl = $(articleElem).attr('href');
-
                 // Fetch the article page
-                const articleResponse = await axiosInstance.get(BASE_URL + articleUrl);
+                const articleResponse = await axiosInstance.get(join(BASE_URL, articleUrl || ''));
                 await delay(); // Delay of 1 second
                 const articlePage = load(articleResponse.data);
 
@@ -74,7 +77,7 @@ const crawlUDO = async () => {
                     const section = {
                         title: $(sectionElem).text(),
                         content: '',
-                        url: sectionUrl
+                        url: sectionUrl || ''
                     };
 
                     // Add logging before each section call
