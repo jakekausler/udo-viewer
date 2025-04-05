@@ -1,6 +1,5 @@
 import {
   Group,
-  Button,
   Burger,
   Select,
   ActionIcon,
@@ -9,7 +8,7 @@ import {
   Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconSettings, IconSun, IconSunMoon } from "@tabler/icons-react";
+import { IconSettings, IconSun } from "@tabler/icons-react";
 
 export default function Header({
   margin,
